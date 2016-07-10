@@ -17,55 +17,47 @@
             <h:form id="Buses">
             <p:layout fullPage="true">
 
-                <p:layoutUnit position="north" size="50" resizable="false" closable="true">
+                <p:layoutUnit position="north" size="50" style=" text-align: center" resizable="false" closable="true">
                     Reserva de Buses
                 </p:layoutUnit>
                 
-                <p:layoutUnit position="west" size="175" header="Left" collapsible="true">
-                    <p:menu>
-                    </p:menu>
-                </p:layoutUnit>
-                
-                <p:layoutUnit position="center">
-                    <p:tabView scrollable="true" >
-                        <p:tab title="Registro Cliente">
-                            <p:growl id="messages" />
-                            <p:splitButton value="Guardar" actionListener="#{botoncliente.Guardar}" update="messages" icon="ui-icon-disk">
-                                <p:menuitem value="Limpiar" actionListener="#{botoncliente.Limpiar}" ajax="false" icon="ui-icon-close" />
-                            </p:splitButton>
-                            <center>
-                            <table border="0">
+                <p:layoutUnit position="west" size="325" header="Informacion" collapseSize="50" resizable="true" collapsible="false">
+                    <table border="0">
                                 <thead>
                                     <tr>
                                     <th style=" text-align: center">
-                                        <br/><br/>
                                         Nombres:
-                                        <br/><br/>
-                                        Apellidos:
-                                        <br/><br/><br/>
-                                        Cedula:
-                                        <br/><br/>
-                                        Telefono:
-                                        <br/><br/>
-                                        Correo Personal:
-                                    </th>
-                                    <th>
-                                        <br/><br/>
+                                        <br/>
                                         <input type="text"  id="txtNombre" size="20"  />
                                         <br/><br/>
+                                        Apellidos:
+                                        <br/>
                                         <input type="text"  id="txApellido" size="20" />
                                         <br/><br/>
+                                        Cedula:
+                                        <br/>
                                         <input type="text"  id="txtCedula" size="20" />
                                         <br/><br/>
+                                        Telefono:
+                                        <br/>
                                         <input type="text" id="TxtTelefono" size="20" />
                                         <br/><br/>
-                                        <input type="text" id="TxtCorreo" size="30" />
+                                        Correo Personal:
+                                        <br/>
+                                        <input type="text" id="TxtCorreo" size="25" />
+                                        <br/><br/>
+                                        <p:growl id="messages" />
+                                        <p:splitButton value="Guardar" actionListener="#{botoncliente.Guardar}" update="messages" icon="ui-icon-disk">
+                                        <p:menuitem value="Limpiar" actionListener="#{botoncliente.Limpiar}" ajax="false" icon="ui-icon-close" />
+                                        </p:splitButton>
                                     </th>
                                     </tr>
                                 </thead>
                             </table>
-                            </center>
-                        </p:tab>
+                </p:layoutUnit>
+                
+                <p:layoutUnit position="center">
+                    <p:tabView scrollable="true" >
                         
                         <p:tab title="Reserva" >
                             <table border="0">
@@ -87,79 +79,69 @@
                                     &nbsp;&nbsp;&nbsp;&nbsp;
                                 </td>
                                 <td width="300" height="645" background="Img/bus-310766_640.png">
+                                    <br/><br/><br/><br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                    
                                     <br/><br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                                    <input type="checkbox" name="1" value="ON" />
-                                    <input type="checkbox" name="2" value="ON" />
-                                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                                    <input type="checkbox" name="3" value="ON" />
-                                    <input type="checkbox" name="4" value="ON" />
-                                    <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                                    <input type="checkbox" name="5" value="ON" />
-                                    <input type="checkbox" name="6" value="ON" />
-                                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                                    <input type="checkbox" name="7" value="ON" />
-                                    <input type="checkbox" name="8" value="ON" />
-                                    <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                                     <input type="checkbox" name="9" value="ON" />
                                     <input type="checkbox" name="10" value="ON" />
                                     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                                     <input type="checkbox" name="11" value="ON" />
                                     <input type="checkbox" name="12" value="ON" />
-                                    <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                    <br/><br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                                     <input type="checkbox" name="13" value="ON" />
                                     <input type="checkbox" name="14" value="ON" />
                                     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                                     <input type="checkbox" name="15" value="ON" />
                                     <input type="checkbox" name="16" value="ON" />
-                                    <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                    <br/><br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                                     <input type="checkbox" name="17" value="ON" />
                                     <input type="checkbox" name="18" value="ON" />
                                     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                                     <input type="checkbox" name="19" value="ON" />
                                     <input type="checkbox" name="20" value="ON" />
-                                    <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                    <br/><br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                                     <input type="checkbox" name="21" value="ON" />
                                     <input type="checkbox" name="22" value="ON" />
                                     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                                     <input type="checkbox" name="23" value="ON" />
                                     <input type="checkbox" name="24" value="ON" />
-                                    <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                    <br/><br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                                     <input type="checkbox" name="25" value="ON" />
                                     <input type="checkbox" name="26" value="ON" />
                                     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                                     <input type="checkbox" name="27" value="ON" />
                                     <input type="checkbox" name="28" value="ON" />
-                                    <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                    <br/><br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                                     <input type="checkbox" name="29" value="ON" />
                                     <input type="checkbox" name="30" value="ON" />
                                     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                                     <input type="checkbox" name="31" value="ON" />
                                     <input type="checkbox" name="32" value="ON" />
-                                    <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                    <br/><br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                                     <input type="checkbox" name="33" value="ON" />
                                     <input type="checkbox" name="34" value="ON" />
                                     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                                     <input type="checkbox" name="35" value="ON" />
                                     <input type="checkbox" name="36" value="ON" />
-                                    <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                    <br/><br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                                     <input type="checkbox" name="37" value="ON" />
                                     <input type="checkbox" name="38" value="ON" />
                                     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                                     <input type="checkbox" name="39" value="ON" />
                                     <input type="checkbox" name="40" value="ON" />
-                                    <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                    <br/><br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                                     <input type="checkbox" name="41" value="ON" />
                                     <input type="checkbox" name="42" value="ON" />
                                     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                                     <input type="checkbox" name="43" value="ON" />
                                     <input type="checkbox" name="44" value="ON" />
-                                    <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                    <br/><br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                                     <input type="checkbox" name="45" value="ON" />
                                     <input type="checkbox" name="46" value="ON" />
                                     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                                     <input type="checkbox" name="47" value="ON" />
                                     <input type="checkbox" name="48" value="OFF" />
-                                    <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                    <br/><br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                                     <input type="checkbox" name="49" value="ON" />
                                     <input type="checkbox" name="50" value="ON" />
                                     <input type="checkbox" name="51" value="ON" />
