@@ -65,6 +65,11 @@ public class botoncliente {
      
     public void Limpiar(ActionEvent actionEvent) {
         addMessage("Pantalla limpia");
+        this.TxtCorreo="";
+            this.TxtTelefono="";
+            this.txApellido="";
+            this.txtCedula="";
+            this.txtNombre="";
     }
     
     public void Buscar(ActionEvent actionEvent) {

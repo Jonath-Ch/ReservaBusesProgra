@@ -24,34 +24,37 @@
                 <p:layoutUnit position="west" size="325" header="Informacion" collapseSize="50" resizable="true" collapsible="false">
                     <table border="0">
                                 <thead>
-                                    <tr>
                                     <th style=" text-align: center">
                                         Nombres:
                                         <br/>
-                                        <input type="text"  id="txtNombre" size="20"  />
+                                        <p:inputText   id="txtNombre" value ="#{botoncliente.txtNombre}"  />
                                         <br/><br/>
                                         Apellidos:
                                         <br/>
-                                        <input type="text"  id="txApellido" size="20" />
+                                        <p:inputText   id="txtApellido" value ="#{botoncliente.txApellido}"  />
                                         <br/><br/>
                                         Cedula:
                                         <br/>
-                                        <input type="text"  id="txtCedula" size="20" />
+                                        <p:inputText   id="txtCedula" value ="#{botoncliente.txtCedula}"  />
                                         <br/><br/>
                                         Telefono:
                                         <br/>
-                                        <input type="text" id="TxtTelefono" size="20" />
+                                        <p:inputText   id="txtTelefono" value ="#{botoncliente.txtTelefono}"  />
                                         <br/><br/>
                                         Correo Personal:
                                         <br/>
-                                        <input type="text" id="TxtCorreo" size="25" />
+                                        <p:inputText   id="txtCorreoPersonal" value ="#{botoncliente.txtCorreo}"  />
                                         <br/><br/>
+                                        <p:growl id="busqueda" />
+                                    <p:splitButton value="Buscar" actionListener="#{botoncliente.Buscar}" ajax="false" update="busqueda" icon="ui-icon-search">
+                                        <p:menuitem value="Limpiar" actionListener="#{botoncliente.Limpiar}" ajax="false" icon="ui-icon-arrowrefresh-1-s" />
+                                    </p:splitButton>
                                         <p:growl id="messages" />
                                         <p:splitButton value="Guardar" actionListener="#{botoncliente.Guardar}" update="messages" icon="ui-icon-disk">
                                             <p:menuitem value="Limpiar" actionListener="#{botoncliente.Limpiar}" ajax="false" icon="ui-icon-close" />
                                         </p:splitButton>
                                     </th>
-                                    </tr>
+                                  
                                 </thead>
                             </table>
                 </p:layoutUnit>
@@ -74,12 +77,9 @@
                                     <br/>
                                     Horario:
                                     <br/>
-                                    <p:calendar id="time" value="#{calendarView.date11}" pattern="HH:mm" timeOnly="true"  />
+                                    <p:calendar id="time"  pattern="HH:mm" timeOnly="true"  />
                                     <br/><br/>
-                                    <p:growl id="busqueda" />
-                                    <p:splitButton value="Buscar" actionListener="#{botoncliente.Buscar(actionEvent)}" update="busqueda" icon="ui-icon-search">
-                                        <p:menuitem value="Limpiar" actionListener="#{botoncliente.Limpiar(actionEvent)}" ajax="false" icon="ui-icon-arrowrefresh-1-s" />
-                                    </p:splitButton>
+                                    
                                     &nbsp;&nbsp;&nbsp;&nbsp;
                                 </td>
                                 <td width="300" height="645" background="Img/bus-310766_640.png">
