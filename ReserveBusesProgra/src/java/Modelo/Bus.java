@@ -51,9 +51,6 @@ public class Bus {
         for(int i=0;i<ocupados.length;i++)
             this.num_asientos.set(ocupados[i], Boolean.FALSE);
     }
-    public void enter(){
-        
-    }
     
     
 }

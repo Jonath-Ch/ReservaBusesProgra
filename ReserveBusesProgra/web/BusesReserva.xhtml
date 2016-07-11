@@ -48,7 +48,7 @@
                                         <br/><br/>
                                         <p:growl id="messages" />
                                         <p:splitButton value="Guardar" actionListener="#{botoncliente.Guardar}" update="messages" icon="ui-icon-disk">
-                                        <p:menuitem value="Limpiar" actionListener="#{botoncliente.Limpiar}" ajax="false" icon="ui-icon-close" />
+                                            <p:menuitem value="Limpiar" actionListener="#{botoncliente.Limpiar}" ajax="false" icon="ui-icon-close" />
                                         </p:splitButton>
                                     </th>
                                     </tr>
@@ -62,7 +62,7 @@
                         <p:tab title="Reserva" >
                             <table border="0">
                                 <td width="200" height="400" >
-                                    Cedula: <input type="text" id ="BusCedula" name="BusCedula" value="" size="20" />
+                                    Cedula: <p:inputText   id="txtCedula"  value="#{botoncliente.txtCedula}"/>
                                     <br/>
                                     Fecha:
                                     <br/>
@@ -75,7 +75,11 @@
                                     Horario:
                                     <br/>
                                     <p:calendar id="time" value="#{calendarView.date11}" pattern="HH:mm" timeOnly="true"  />
-                                    <br/>
+                                    <br/><br/>
+                                    <p:growl id="busqueda" />
+                                    <p:splitButton value="Buscar" actionListener="#{botoncliente.Buscar(actionEvent)}" update="busqueda" icon="ui-icon-search">
+                                        <p:menuitem value="Limpiar" actionListener="#{botoncliente.Limpiar(actionEvent)}" ajax="false" icon="ui-icon-arrowrefresh-1-s" />
+                                    </p:splitButton>
                                     &nbsp;&nbsp;&nbsp;&nbsp;
                                 </td>
                                 <td width="300" height="645" background="Img/bus-310766_640.png">
@@ -153,9 +157,9 @@
                     </p:tabView>
                 </p:layoutUnit>     
                 
-                <p:layoutUnit position="south" size="100" closable="true" collapsible="true">
-                    Tu viaje y tu destino en buenas manos .l. 
-                    <br/><img src="Img/reservas.png" width="80" height="80" alt="Reservas"/>
+                <p:layoutUnit position="south" size="100" style=" text-align: left" closable="true" collapsible="true">
+                    Tu viaje y tu destino en buenas manos
+                    <img src="Img/reservas.png" width="60" height="60" alt="Reservas"/>
                 </p:layoutUnit>
 
             </p:layout>
