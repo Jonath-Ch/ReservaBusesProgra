@@ -72,11 +72,15 @@ public class botoncliente {
         
     }
     
-    public void BuscarAsientos(ActionEvent actionEvent){
+    public boolean BuscarAsientos(int j){
         addMessage("visto por enny");
-        for(int i=0;i<45;i++){
+        for(int i=0;i<25;i++){
             this.asientos[i]=Boolean.TRUE;
         }
+        for(int i=26;i<45;i++){
+            this.asientos[i]=Boolean.FALSE;
+        }
+        return asientos[j];
     }
     
     public boolean asientousado(int i){
