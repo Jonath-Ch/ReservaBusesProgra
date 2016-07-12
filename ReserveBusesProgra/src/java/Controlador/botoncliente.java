@@ -11,11 +11,20 @@ import javax.faces.event.ActionEvent;
  
 @ManagedBean
 public class botoncliente {
-   String txtNombre;
+    boolean asientos[]=new boolean[45];
+    String txtNombre;
     String txApellido;
     String txtCedula;
     String TxtTelefono;
     String TxtCorreo;
+
+    public boolean[] getAsientos() {
+        return asientos;
+    }
+
+    public void setAsientos(boolean[] asientos) {
+        this.asientos = asientos;
+    }
 
     public String getTxtNombre() {
         return txtNombre;
@@ -61,6 +70,17 @@ public class botoncliente {
         addMessage("Datos Guardados");
         //poner la clase de guardado en la base de datos 
         
+    }
+    
+    public void BuscarAsientos(ActionEvent actionEvent){
+        addMessage("visto por enny");
+        for(int i=0;i<45;i++){
+            this.asientos[i]=Boolean.TRUE;
+        }
+    }
+    
+    public boolean asientousado(int i){
+        return this.asientos[i];
     }
      
     public void Limpiar(ActionEvent actionEvent) {

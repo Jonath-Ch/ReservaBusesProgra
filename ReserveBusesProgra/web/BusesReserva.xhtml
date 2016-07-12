@@ -22,9 +22,16 @@
                 </p:layoutUnit>
                 
                 <p:layoutUnit position="west" size="325" header="Informacion" collapseSize="50" resizable="true" collapsible="false">
+                    <h:form id="usuario">
                     <table border="0">
                                 <thead>
                                     <th style=" text-align: center">
+                                        Cedula:
+                                        <br/>
+                                        <p:inputText   id="txtCedula" value ="#{botoncliente.txtCedula}"  />
+                                        &nbsp;
+                                        <p:commandButton actionListener="#{botoncliente.Buscar}" ajax="false" update="busqueda" icon="ui-icon-search"/>
+                                        <br/><br/>
                                         Nombres:
                                         <br/>
                                         <p:inputText   id="txtNombre" value ="#{botoncliente.txtNombre}"  />
@@ -32,10 +39,6 @@
                                         Apellidos:
                                         <br/>
                                         <p:inputText   id="txtApellido" value ="#{botoncliente.txApellido}"  />
-                                        <br/><br/>
-                                        Cedula:
-                                        <br/>
-                                        <p:inputText   id="txtCedula" value ="#{botoncliente.txtCedula}"  />
                                         <br/><br/>
                                         Telefono:
                                         <br/>
@@ -45,21 +48,20 @@
                                         <br/>
                                         <p:inputText   id="txtCorreoPersonal" value ="#{botoncliente.txtCorreo}"  />
                                         <br/><br/>
-                                        <p:growl id="busqueda" />
-                                    <p:splitButton value="Buscar" actionListener="#{botoncliente.Buscar}" ajax="false" update="busqueda" icon="ui-icon-search">
-                                        <p:menuitem value="Limpiar" actionListener="#{botoncliente.Limpiar}" ajax="false" icon="ui-icon-arrowrefresh-1-s" />
-                                    </p:splitButton>
                                         <p:growl id="messages" />
                                         <p:splitButton value="Guardar" actionListener="#{botoncliente.Guardar}" update="messages" icon="ui-icon-disk">
-                                            <p:menuitem value="Limpiar" actionListener="#{botoncliente.Limpiar}" ajax="false" icon="ui-icon-close" />
+                                        <p:menuitem value="Limpiar" actionListener="#{botoncliente.Limpiar}" ajax="false" icon="ui-icon-close" />
                                         </p:splitButton>
+                                        
                                     </th>
                                   
                                 </thead>
                             </table>
+                        </h:form>
                 </p:layoutUnit>
                 
                 <p:layoutUnit position="center">
+                    <h:form id="Asientos">
                     <p:tabView scrollable="true" >
                         
                         <p:tab title="Reserva" >
@@ -69,7 +71,7 @@
                                     <br/>
                                     Fecha:
                                     <br/>
-                                    <p:calendar/>
+                                    <p:calendar/> <p:commandButton actionListener="#{botoncliente.BuscarAsientos}" ajax="false" update="busqueda" icon="ui-icon-search"/>
                                     <br/>
                                     Ruta:
                                     <br/>
@@ -86,8 +88,8 @@
                                     <br/><br/><br/><br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                                     
                                     <br/><br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                                    <input type="checkbox" name="9" value="ON" />
-                                    <input type="checkbox" name="10" value="ON" />
+                                <p:selectBooleanCheckbox id="Asiento" value="#{botoncliente.asientousado(0)}" />
+                                    <p:selectBooleanCheckbox id="Asiento2" value="" />
                                     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                                     <input type="checkbox" name="11" value="ON" />
                                     <input type="checkbox" name="12" value="ON" />
@@ -155,6 +157,7 @@
                             </table>
                         </p:tab>               
                     </p:tabView>
+                  </h:form>
                 </p:layoutUnit>     
                 
                 <p:layoutUnit position="south" size="100" style=" text-align: left" closable="true" collapsible="true">
